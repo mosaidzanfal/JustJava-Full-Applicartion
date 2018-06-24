@@ -1,37 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="top"
-    android:orientation="vertical"
-    android:paddingLeft="16dp"
+@@ -8,10 +8,38 @@
     android:paddingRight="16dp"
     android:paddingTop="20px"
     android:id="@+id/layout">
+    <EditText
+        android:id="@+id/TxtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/UserName"
+        android:inputType="textPersonName" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="quantity"
+        android:text="Padding"
+        style="@style/HeaderTextStyle" />
+    <CheckBox
+        android:id="@+id/Haswhippedcream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:text="@string/wippedcream"
+        android:textSize="16sp"
+        />
+    <CheckBox
+        android:id="@+id/chocolate_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:text="@string/Chocolate"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Quan"
         android:textSize="50px"
         android:textStyle="bold"
         android:textAllCaps="true"
-        />
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+@ -22,7 +50,7 @@
         android:layout_height="wrap_content"
         android:gravity="left"
         android:orientation="horizontal"
        >
+        >
 
         <Button
             android:layout_width="48dp"
-            android:layout_height="48dp"
+@ -30,15 +58,16 @@
             android:layout_marginTop="16px"
             android:layout_marginRight="16px"
             android:onClick="decrement"
             android:text="-"
             android:textSize="30px" />
+            android:text="@string/Decrement"
+            android:textSize="30px"
+            />
 
         <TextView
             android:id="@+id/quantity_text_view"
@@ -39,47 +63,28 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16px"
             android:text="0"
+            android:text="2"
             android:textColor="#000000"
             android:textSize="50px"
             android:textStyle="bold" />
-
-        <Button
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+@ -49,7 +78,7 @@
             android:layout_marginTop="16px"
             android:layout_marginLeft="16px"
             android:onClick="increment"
             android:text="+"
+            android:text="@string/Increment"
             android:textSize="30px" />
 
     </LinearLayout>
-
-    <TextView
-
+@ -59,9 +88,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16px"
         android:text="ORDER SUMMARY"
         android:textSize="40px"
         android:textStyle="bold"/>
+        android:text="@string/orderSummry"
+       style="@style/HeaderTextStyle"/>
     <TextView
         android:id="@+id/orderSummaryTextView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16px"
-        android:text=""
-        android:textColor="#000000"
-        android:textSize="50px"
-        android:textStyle="bold"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16px"
-        android:text="order"
-        android:textSize="30px"
-        android:onClick="submitOrder"
-        />
-
-</LinearLayout>
